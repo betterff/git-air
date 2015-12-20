@@ -77,73 +77,73 @@ for i in range(0,sum5):
 for i in range(0,len(weatherd)):
 	for j in range(0,sum1):
 		if tmp[j][0]==math.floor(weatherd[i][0]):
-			tmp[j][1]+=(1.0/count)
+			tmp[j][1]+=(1.0/len(weatherd))
 			tmp[j][4]+=1
 	for j in range(0,sum2):
 		if hum[j][0]==math.floor(weatherd[i][1]):
-			hum[j][1]+=(1.0/count)
+			hum[j][1]+=(1.0/len(weatherd))
 			hum[j][4]+=1
 	for j in range(0,sum3):
 		if wnf[j][0]==math.floor(weatherd[i][2]):
-			wnf[j][1]+=(1.0/count)
+			wnf[j][1]+=(1.0/len(weatherd))
 			wnf[j][4]+=1
 	for j in range(0,sum4):
 		if wnd[j][0]==math.floor(weatherd[i][3]):
-			wnd[j][1]+=(1.0/count)
+			wnd[j][1]+=(1.0/len(weatherd))
 			wnd[j][4]+=1
 	for j in range(0,sum5):
 		if rain[j][0]==math.floor(weatherd[i][4]):
-			rain[j][1]+=(1.0/count)
+			rain[j][1]+=(1.0/len(weatherd))
 			rain[j][4]+=1
 
 for i in range(0,len(weathero)):
 	for j in range(0,sum1):
 		if tmp[j][0]==math.floor(weathero[i][0]):
-			tmp[j][2]+=(1.0/2985)
+			tmp[j][2]+=(1.0/len(weathero))
 			tmp[j][5]+=1
 	for j in range(0,sum2):
 		if hum[j][0]==math.floor(weathero[i][1]):
-			hum[j][2]+=(1.0/2985)
+			hum[j][2]+=(1.0/len(weathero))
 			hum[j][5]+=1
 	for j in range(0,sum3):
 		if wnf[j][0]==math.floor(weathero[i][2]):
-			wnf[j][2]+=(1.0/2985)
+			wnf[j][2]+=(1.0/len(weathero))
 			wnf[j][5]+=1
 	for j in range(0,sum4):
 		if wnd[j][0]==math.floor(weathero[i][3]):
-			wnd[j][2]+=(1.0/2985)
+			wnd[j][2]+=(1.0/len(weathero))
 			wnd[j][5]+=1
 	for j in range(0,sum5):
 		if rain[j][0]==math.floor(weathero[i][4]):
-			rain[j][2]+=(1.0/2985)
+			rain[j][2]+=(1.0/len(weathero))
 			rain[j][5]+=1
 
 print 'tmp:'
 for i in range(0,sum1):
-	if tmp[i][1]>tmp[i][2]:
+	if tmp[i][1]>tmp[i][2]*3:
 		tmp[i][3]=1
 		print tmp[i][0],tmp[i][1],tmp[i][2],tmp[i][4],tmp[i][5]
 print 'hum:'
 for i in range(0,sum2):
-	if hum[i][1]>hum[i][2]:
+	if hum[i][1]>hum[i][2]*3:
 		hum[i][3]=1,
 		print hum[i][0],hum[i][1],hum[i][2],hum[i][4],hum[i][5]
 print 'wnf:'
 for i in range(0,sum3):
-	if wnf[i][1]>wnf[i][2]:
+	if wnf[i][1]>wnf[i][2]*3:
 		wnf[i][3]=1
 		print wnf[i][0],wnf[i][1],wnf[i][2],wnf[i][4],wnf[i][5]
 print 'wnd:'
 for i in range(0,sum4):
-	if wnd[i][1]>wnd[i][2]:
+	if wnd[i][1]>wnd[i][2]*3:
 		wnd[i][3]=1
 		print wnd[i][0],wnd[i][1],wnd[i][2],wnd[i][4],wnd[i][5]
 print 'rain:'
 for i in range(0,sum5):
-	if rain[i][1]>rain[i][2]:
+	if rain[i][1]>rain[i][2]*3:
 		rain[i][3]=1
 		print rain[i][0],rain[i][1],rain[i][2],rain[i][4],rain[i][5]
-	
+
 
 
 
